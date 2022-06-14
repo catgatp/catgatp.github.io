@@ -41,6 +41,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">串口配置</div>
 					<div class="panel-body">
+						<text id="ver_id"></text>
 						<text>串口号：</text>
 						<input type="text" name="" id="portName">
 
@@ -107,6 +108,8 @@
 			<script type="text/javascript" src="/cloudSerial/js/bootstrap.min.js"></script>
 			<script type="text/javascript" src="/cloudSerial/js/index.js"></script>
 			<script>
+				
+				$("ver_id").text(navigator.userAgent)
 				if ('serviceWorker' in navigator) {
 					window.addEventListener('load', () => {
 						navigator.serviceWorker.register('/cloudSerial/sw.js',{scope:'/cloudSerial/'})
