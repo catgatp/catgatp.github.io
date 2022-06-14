@@ -109,7 +109,10 @@
 			<script type="text/javascript" src="/cloudSerial/js/index.js"></script>
 			<script>
 				
-				$("#ver_id").text(navigator.userAgent)
+				
+				$(function (){
+					$("#ver_id").text(navigator.userAgent)
+				})
 				if ('serviceWorker' in navigator) {
 					window.addEventListener('load', () => {
 						navigator.serviceWorker.register('/cloudSerial/sw.js',{scope:'/cloudSerial/'})
